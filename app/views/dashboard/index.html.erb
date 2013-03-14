@@ -1,3 +1,14 @@
 <h1>Dashboard</h1>
 <h3>Owned Items: <%= current_user.items.count %></h3>
 <%= link_to "Items", :controller => "items"%>
+<br />
+<br />
+<br />
+<h3>My Unrecovered Stolen Items: <%= @stolenitems.count %></h3>
+
+<% @stolenitems.each do |s| %>
+	<ul>
+		<li><%= s.name %></li>
+		<!-- ><li><%= s.description %></li> -->
+	</ul>
+<% end %>
