@@ -6,6 +6,10 @@
 	<ul>
 		<li><%= i.name %></li>
 		<li><%= i.description %></li>
+		<% if i.stolen? %>
+			<li style="color: red;"><%= "Stolen" %></li>
+		<% end %>
+			
 		<p><%= link_to "Edit", edit_item_path(i) %></p>
 		<p><%= link_to "Delete", i, :confirm => "Are you sure?", :method => :delete %></p>
 	</ul>
