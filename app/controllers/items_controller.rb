@@ -27,14 +27,22 @@ class ItemsController < ApplicationController
   end
   
   def edit
-    
+    @item = Item.find(params[:id])
   end
   
   def update
-    
+    @item = Item.find(params[:id])
+    if @item.update_attributes(params[:item])
+      redirect_to items_path, :notice => "Your item was updated."
+    else
+      render "edit"
+    end
   end
   
   def destroy
+    @item = Item.find(params[:id])
     
+    @item.destroy
+    redirect_to items_path, :notice => "Item deleted"
   end
 end

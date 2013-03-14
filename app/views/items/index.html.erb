@@ -6,5 +6,7 @@
 	<ul>
 		<li><%= i.name %></li>
 		<li><%= i.description %></li>
+		<p><%= link_to "Edit", edit_item_path(i) %></p>
+		<p><%= link_to "Delete", i, :confirm => "Are you sure?", :method => :delete %></p>
 	</ul>
 <% end %>
