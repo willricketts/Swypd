@@ -1,1 +1,3 @@
 <h1>Dashboard</h1>
+<h3>Owned Items: <%= current_user.items.count %></h3>
+<%= link_to "Items", :controller => "items"%>

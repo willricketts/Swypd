@@ -1,0 +1,21 @@
+<h1>Add an Item</h1>
+
+<%= form_for @item do |i| %>
+	<% if @item.errors.any? %>
+		<h3>Errors</h3>
+		<ul>
+			<% @post.errors.full_messages.each do |message| %>
+				<li><%= message %></li>
+			<% end %>
+		</ul>
+	<% end %>
+	<p>
+		<%= i.label :name %><br />
+		<%= i.text_field :name %><br />
+		
+		<%= i.label :description %><br />
+		<%= i.text_field :description %><br />
+		
+		<%= i.submit "Add Item" %>
+	</p>
+<% end %>

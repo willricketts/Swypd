@@ -1,0 +1,10 @@
+<h1>Your Items</h1>
+<a href="http://localhost:3000/">Dashboard</a>
+<%= link_to "New Item", new_item_path %>
+<% @items.each do |i| %>
+	<hr>
+	<ul>
+		<li><%= i.name %></li>
+		<li><%= i.description %></li>
+	</ul>
+<% end %>
