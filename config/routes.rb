@@ -5,6 +5,11 @@ Valuables::Application.routes.draw do
   
   resources :dashboard
   resources :items
+  resources :pages
+  
+  match '/pricing' => 'pages#pricing'
+  match '/about' => 'pages#about'
+  match '/howitworks' => 'pages#howitworks'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

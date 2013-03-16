@@ -14,9 +14,9 @@
             	<li><%= link_to "Disputes" %></li>
             	<li><%= link_to "My Account" %></li>
 			<% else %>
-				<li><%= link_to "About" %></li>
-				<li><%= link_to "How it Works" %></li>
-				<li><%= link_to "Pricing" %></li>
+				<li><%= link_to "About", :controller => "pages", :action => "about" %></li>
+				<li><%= link_to "How it Works", :controller => "pages", :action => "howitworks" %></li>
+				<li><%= link_to "Pricing", :controller => "pages", :action => "pricing" %></li>
 			<% end %>
 			<li>
 				<div style="display: inline-block; margin-top: 10px; margin-left: 15px;">
