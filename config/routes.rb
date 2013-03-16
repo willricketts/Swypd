@@ -10,6 +10,7 @@ Valuables::Application.routes.draw do
   match '/pricing' => 'pages#pricing'
   match '/about' => 'pages#about'
   match '/howitworks' => 'pages#howitworks'
+  match '/account' => 'accounts#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

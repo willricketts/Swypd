@@ -12,7 +12,7 @@
 			<% if user_signed_in? %>
             	<li><%= link_to "Items", :controller => "items"%></li>
             	<li><%= link_to "Disputes" %></li>
-            	<li><%= link_to "My Account" %></li>
+            	<li><%= link_to "My Account", :controller => "accounts", :action => "index" %></li>
 			<% else %>
 				<li><%= link_to "About", :controller => "pages", :action => "about" %></li>
 				<li><%= link_to "How it Works", :controller => "pages", :action => "howitworks" %></li>
