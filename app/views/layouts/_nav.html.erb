@@ -12,18 +12,19 @@
 			<% if user_signed_in? %>
             	<li><%= link_to "Items", :controller => "items"%></li>
             	<li><%= link_to "Disputes" %></li>
-            	<li><%= link_to "My Account", :controller => "accounts", :action => "index" %></li>
+            	<li><%= link_to "My Account", edit_user_registration_path %></li>
 			<% else %>
 				<li><%= link_to "About", :controller => "pages", :action => "about" %></li>
 				<li><%= link_to "How it Works", :controller => "pages", :action => "howitworks" %></li>
 				<li><%= link_to "Pricing", :controller => "pages", :action => "pricing" %></li>
+				<li><%= link_to "Blog" %>
 			<% end %>
 			<li>
 				<div style="display: inline-block; margin-top: 10px; margin-left: 15px;">
 				  <% if user_signed_in? %>
 				    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
 				  <% else %>
-				    <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "Sign In", new_user_session_path %>
+				  	<%= link_to "Sign In", new_user_session_path %>
 				  <% end %>
 				</div>
 			</li>

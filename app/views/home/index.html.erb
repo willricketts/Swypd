@@ -1,6 +1,7 @@
 <%= render 'layouts/nav'%>
-<h1>Home</h1>
 
 	<% flash.each do |name, msg| %>
 	  <%= content_tag :div, msg, :id => "flash_#{name}" %>
 	<% end %>
+	
+	<h1><%= link_to "Sign up", new_user_registration_path %></h1>
