@@ -1,7 +1,11 @@
 class ItemsController < ApplicationController
   
   def index
-    @items = current_user.items.all
+    if user_signed_in?
+      @items = current_user.items.all
+    else
+      redirect_to :controller => "home", :action => "index"
+    end
   end
   
   def show

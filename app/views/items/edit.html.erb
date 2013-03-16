@@ -1,24 +1,8 @@
-<h1>Edit Item</h1>
+<%= render 'layouts/nav'%>
 
-<%= form_for @item do |i| %>
-	<% if @item.errors.any? %>
-		<h3>Errors</h3>
-		<ul>
-			<% @post.errors.full_messages.each do |message| %>
-				<li><%= message %></li>
-			<% end %>
-		</ul>
-	<% end %>
-	<p>
-		<%= i.label :name %><br />
-		<%= i.text_field :name %><br />
-		
-		<%= i.label :description %><br />
-		<%= i.text_field :description %><br />
-		
-		<%= i.label :stolen %><br />
-		<%= i.check_box :stolen %><br />
-		
-		<%= i.submit "Update Item" %>
-	</p>
-<% end %>
+<%- model_class = Item -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => t('helpers.titles.edit', :model => model_class.model_name.human,
+                                   :default => "Edit #{model_class.model_name.human}") %></h1>
+</div>
+<%= render :partial => 'form' %>
