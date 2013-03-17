@@ -16,6 +16,7 @@
   <dd><%= @item.serial_number %></dd>
   <dt><strong><%= model_class.human_attribute_name(:stolen) %>:</strong></dt>
   <dd><%= @item.stolen %></dd>
+  <%= image_tag @item.image.url(:square) %>
 </dl>
 
 <div class="form-actions">

@@ -34,4 +34,14 @@ Valuables::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => ENV['vaultphotos'],
+      :access_key_id => ENV['AKIAJYU55AMV7ZZT7SGA'],
+      :secret_access_key => ENV['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']
+    }
+  }
+  
 end

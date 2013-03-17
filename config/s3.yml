@@ -1,0 +1,14 @@
+development:
+    bucket: vaultphotos.s3-website-us-east-1.amazonaws.com
+    access_key_id: AKIAJYU55AMV7ZZT7SGA
+    secret_access_key: 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
+
+test:
+    bucket: vaultphotos.s3-website-us-east-1.amazonaws.com
+    access_key_id: AKIAJYU55AMV7ZZT7SGA
+    secret_access_key: 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
+
+production:
+    bucket: vaultphotos.s3-website-us-east-1.amazonaws.com
+    access_key_id: AKIAJYU55AMV7ZZT7SGA
+    secret_access_key: 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
